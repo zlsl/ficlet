@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_update"
+        android:orderInCategory="101"
+        android:title="@string/action_update"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/action_global_filter"
+        android:orderInCategory="102"
+        android:title="@string/action_global_filter"
+        app:showAsAction="never" />
+
+    <item
+        android:menuCategory="secondary"
+        android:title="Кэш">
+        android:orderInCategory="110"
+        <menu>
+            <item
+                android:id="@+id/action_flush"
+                android:orderInCategory="100"
+                android:title="@string/action_flush"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_export"
+                android:orderInCategory="100"
+                android:title="@string/action_export"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_stats"
+                android:orderInCategory="100"
+                android:title="@string/action_stats"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item
+        android:menuCategory="secondary"
+        android:title="Поддержка">
+        <menu>
+            <item
+                android:id="@+id/action_about"
+                android:orderInCategory="100"
+                android:title="@string/str_about"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_changelog"
+                android:orderInCategory="100"
+                android:title="@string/changelog_title"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_open_by_id"
+        android:title="Открыть фанфик по ID" />
+    <item
+        android:id="@+id/action_donate"
+        android:orderInCategory="100000"
+        android:title="Пожертвование проекту Ficlet" />
+    <item
+        android:id="@+id/action_up"
+        android:orderInCategory="100001"
+        android:title="Скачать последнюю версию" />
+</menu>

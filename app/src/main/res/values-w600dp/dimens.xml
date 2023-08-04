@@ -1,0 +1,20 @@
+<resources>
+
+    <dimen name="text_size">18sp</dimen>
+
+    <dimen name="fic_item_header_text_size">22sp</dimen>
+    <dimen name="fic_item_text_size">18sp</dimen>
+    <dimen name="fic_item_description_text_size">16sp</dimen>
+    <dimen name="fic_item_labels_text_size">18sp</dimen>
+
+    <dimen name="widget_badge_text_size">16sp</dimen>
+
+    <dimen name="list_item_text_size">20sp</dimen>
+    <dimen name="list_item_sub_text_size">16sp</dimen>
+    <dimen name="fandom_item_text_size">18sp</dimen>
+
+    <dimen name="fanfic_title_text_size">24sp</dimen>
+    <dimen name="fanfic_direction_text_size">16sp</dimen>
+
+
+</resources>

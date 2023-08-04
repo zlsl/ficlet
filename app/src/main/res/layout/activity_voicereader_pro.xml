@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="zlobniyslaine.ru.ficbook.ActivityVoiceReaderPro">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/white"
+        android:padding="0dp"
+        android:orientation="vertical"
+        tools:context="zlobniyslaine.ru.ficbook.ActivityReader">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_paragraphs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_weight="1"
+            android:scrollbarSize="10dp"
+            android:scrollbars="vertical" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:elevation="3dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                tools:targetApi="lollipop">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/card_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_tts_speed"
+                            android:textColor="@color/textColorPrimary" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <zlobniyslaine.ru.ficbook.controls.FloatSeekBar
+                                android:id="@+id/sb_speech_rate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                app:floatMax="2"
+                                app:floatMin="0" />
+
+                            <TextView
+                                android:id="@+id/tv_speech_rate"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/card_margin"
+                                android:text="@string/string_default_number"
+                                android:textColor="@color/textColorPrimary"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/card_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_tts_pitch"
+                            android:textColor="@color/textColorPrimary" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <zlobniyslaine.ru.ficbook.controls.FloatSeekBar
+                                android:id="@+id/sb_speech_pitch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                app:floatMax="2"
+                                app:floatMin="0" />
+
+                            <TextView
+                                android:id="@+id/tv_speech_pitch"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/card_margin"
+                                android:text="@string/string_default_number"
+                                android:textColor="@color/textColorPrimary"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/card_margin"
+                                android:layout_weight="1"
+                                android:text="@string/str_tts_engine"
+                                android:textColor="@color/white" />
+
+                            <ImageButton
+                                android:id="@+id/btn_tts"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@drawable/ic_action_settings" />
+
+
+                            <ImageButton
+                                android:id="@+id/btn_tts_get"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@drawable/baseline_cloud_download_black_24dp" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_engines"
+                            style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/layout_corners_shape"
+                            tools:listitem="support_simple_spinner_dropdown_item" />
+
+                        <Spinner
+                            android:id="@+id/spinner_voices"
+                            style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/layout_corners_shape"
+                            tools:listitem="support_simple_spinner_dropdown_item" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btn_playstop"
+                        style="@style/CardButtonAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_action_playback_pause"
+                        android:contentDescription="@string/str_vreader_startstop" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb1"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

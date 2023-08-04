@@ -1,0 +1,1 @@
+ALTER TABLE Collections ADD COLUMN author TEXT;

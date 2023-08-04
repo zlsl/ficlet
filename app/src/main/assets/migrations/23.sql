@@ -1,0 +1,2 @@
+ALTER TABLE Fanfic ADD COLUMN tags TEXT;
+

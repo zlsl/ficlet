@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="0dp"
+    tools:context="zlobniyslaine.ru.ficbook.ActivityReader">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pagesmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="3dp"
+        tools:targetApi="lollipop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@android:style/Widget.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/str_page_goto"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_topage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_default_number"
+                    android:textColor="@color/textColorDarkSecondary" />
+
+                <SeekBar
+                    android:id="@+id/sb_pageposition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_closemenupages"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@android:string/ok" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <zlobniyslaine.ru.ficbook.controls.ScrollViewWithOnStopListener
+            android:id="@+id/sv_reader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/wv_reader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="0sp"
+                android:lineSpacingMultiplier="1"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size"
+                android:visibility="gone" />
+
+        </zlobniyslaine.ru.ficbook.controls.ScrollViewWithOnStopListener>
+
+        <LinearLayout
+            android:id="@+id/page_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/page_bg"
+            android:orientation="vertical">
+
+            <zlobniyslaine.ru.ficbook.controls.ClickableViewPager
+                android:id="@+id/pages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                android:overScrollMode="never">
+
+            </zlobniyslaine.ru.ficbook.controls.ClickableViewPager>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:cardCornerRadius="3dp"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <TextView
+                    style="@android:style/Widget.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/str_reader_settings"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/cb_night_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/str_night_mode"
+                    android:textColor="@color/textColorDarkSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_brightness"
+                        android:textColor="@color/textColorDarkSecondary" />
+
+                    <zlobniyslaine.ru.ficbook.controls.FloatSeekBar
+                        android:id="@+id/sb_brightness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:max="60"
+                        android:min="2"
+                        app:floatMax="1"
+                        app:floatMin="-1"
+                        tools:targetApi="o" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/cb_auto_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/str_autoscroll"
+                    android:textColor="@color/textColorDarkSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_scroll_speed"
+                        android:textColor="@color/textColorDarkSecondary" />
+
+                    <SeekBar
+                        android:id="@+id/sb_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:max="25"
+                        android:min="1"
+                        tools:targetApi="o" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_closemenu"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@android:string/ok" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/reader_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/rb_bg_day_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/tv_pages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="2dp"
+                android:paddingLeft="@dimen/card_margin"
+                android:text="@string/string_default_number"
+                android:textColor="#000000"
+                android:paddingStart="@dimen/card_margin"
+                tools:ignore="RtlSymmetry"
+                app:drawableLeftCompat="@drawable/ic_library_books" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/btn_autoscroll"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_action_drag"
+                android:contentDescription="@string/str_autoscroll2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/btn_settings"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_action_settings"
+                android:contentDescription="@string/str_reader_settings_txt"
+                android:focusable="true" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/tv_brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="2dp"
+                android:paddingLeft="@dimen/card_margin"
+                android:text="@string/string_default_number"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingStart="@dimen/card_margin"
+                tools:ignore="RtlSymmetry"
+                app:drawableLeftCompat="@drawable/ic_settings_brightness" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/tv_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="2dp"
+                android:paddingLeft="@dimen/card_margin"
+                android:text="@string/string_default_number"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingStart="@dimen/card_margin"
+                tools:ignore="RtlSymmetry"
+                app:drawableLeftCompat="@drawable/ic_battery_std" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/tv_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/card_margin"
+                android:text="@string/string_default_number"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:paddingEnd="@dimen/card_margin"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="20dp"
+        android:indeterminate="true"
+        android:layout_marginStart="20dp" />
+
+</RelativeLayout>

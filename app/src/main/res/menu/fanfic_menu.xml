@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mReader"
+        android:icon="@drawable/ic_action_book"
+        android:title="@string/str_reader_t" />
+    <item
+        android:id="@+id/mAudioBook"
+        android:icon="@drawable/ic_action_headphones"
+        android:title="@string/str_audiobook_r" />
+    <item
+        android:id="@+id/mMarkReaded"
+        android:icon="@drawable/ic_action_eye_open"
+        android:title="@string/str_mark_readed"
+        android:visible="false" />
+    <item
+        android:id="@+id/mUnReaded"
+        android:icon="@drawable/ic_action_eye_closed"
+        android:title="@string/str_mark_unread"
+        android:visible="false" />
+    <item
+        android:id="@+id/mShareLink"
+        android:icon="@drawable/ic_action_share_b"
+        android:title="@string/str_share_link_t" />
+    <item
+        android:id="@+id/mCreateShortcut"
+        android:icon="@drawable/ic_add_to_queue"
+        android:title="@string/str_create_shortcut" />
+    <item
+        android:id="@+id/mDownload"
+        android:icon="@drawable/ic_get_app"
+        android:title="@string/str_download_f"
+        android:visible="false">
+        <menu>
+            <item
+                android:id="@+id/mDownloadTXT"
+                android:title="@string/str_down_txt" />
+            <item
+                android:id="@+id/mDownloadFB2"
+                android:title="@string/str_down_fb2" />
+            <item
+                android:id="@+id/mDownloadPDF"
+                android:title="@string/str_down_pdf" />
+            <item
+                android:id="@+id/mDownloadEPUB"
+                android:title="@string/str_down_epub" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/mDownloadOpen"
+        android:icon="@drawable/ic_open_in_browser"
+        android:title="@string/str_downopen"
+        android:visible="false">
+        <menu>
+            <item
+                android:id="@+id/mOpenTXT"
+                android:title="@string/str_downopen_txt" />
+            <item
+                android:id="@+id/mOpenFB2"
+                android:title="@string/str_downopen_fb2" />
+            <item
+                android:id="@+id/mOpenPDF"
+                android:title="@string/str_downopen_pdf" />
+            <item
+                android:id="@+id/mOpenEPUB"
+                android:title="@string/str_downopen_epub" />
+        </menu>
+    </item>
+</menu>

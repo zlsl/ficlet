@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_pagesmenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="50dp"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:visibility="gone"
+    app:cardCornerRadius="3dp"
+    app:contentPadding="@dimen/card_margin"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@android:style/Widget.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/str_page_jump"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_topage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/string_default_number"
+                android:textColor="@color/textColorDarkSecondary" />
+
+            <SeekBar
+                android:id="@+id/sb_pageposition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/tv_chapter"
+                style="@android:style/Widget.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/textColorDarkSecondary"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_closemenupages"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@android:string/ok" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

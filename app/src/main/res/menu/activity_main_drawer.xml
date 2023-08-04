@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_action_warning"
+        android:title="@string/str_notifications"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/str_common_settings"
+        android:visible="true" />
+
+
+    <group>
+        <item
+            android:id="@+id/nav_feeds"
+            android:icon="@drawable/ic_library_books"
+            android:title="@string/str_feeds" />
+        <item
+            android:id="@+id/nav_requests_search"
+            android:icon="@drawable/ic_find_in_page"
+            android:title="@string/str_requests_search" />
+        <item
+            android:id="@+id/nav_random"
+            android:icon="@drawable/ic_cached_black_24dp"
+            android:title="@string/str_randomfic" />
+        <item
+            android:id="@+id/nav_popular"
+            android:icon="@drawable/ic_thumb_up_black_24dp"
+            android:title="@string/str_popularfic" />
+        <item
+            android:id="@+id/nav_all_updated"
+            android:icon="@drawable/ic_action_book"
+            android:title="@string/str_allupdated" />
+        <item
+            android:id="@+id/nav_premium"
+            android:icon="@drawable/ic_announcement_black_24dp"
+            android:title="@string/str_critfic" />
+        <item
+            android:id="@+id/nav_popular_authors"
+            android:icon="@drawable/ic_face"
+            android:title="@string/str_popular_authors" />
+        <item
+            android:id="@+id/nav_authors_search"
+            android:icon="@drawable/ic_face"
+            android:title="@string/str_author_search" />
+
+    </group>
+
+    <group
+        android:checkableBehavior="none"
+        android:visible="false">
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_sentiment_satisfied"
+            android:title="@string/str_profile" />
+        <item
+            android:id="@+id/nav_messaging"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="@string/str_pmessages" />
+        <item
+            android:id="@+id/nav_fanfic_root"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/str_fanfics" />
+        <item
+            android:id="@+id/nav_requests"
+            android:icon="@drawable/ic_hourglass_empty"
+            android:title="@string/str_requests" />
+        <item
+            android:id="@+id/nav_liked"
+            android:icon="@drawable/ic_grade_black_24dp"
+            android:title="@string/str_likefic" />
+        <item
+            android:id="@+id/nav_liked_authors"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/str_likeauthor" />
+        <item
+            android:id="@+id/nav_liked_fanfics"
+            android:icon="@drawable/ic_loyalty_black_24dp"
+            android:title="@string/str_likedfics" />
+        <item
+            android:id="@+id/nav_follows"
+            android:icon="@drawable/ic_rate_review"
+            android:title="@string/str_follows" />
+    </group>
+
+
+    <group
+        android:checkableBehavior="none"
+        android:visible="true">
+
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="@string/str_login" />
+
+        <item
+            android:id="@+id/nav_login_social_vk"
+            android:icon="@drawable/vk"
+            android:title="@string/str_login_social_vk" />
+
+    </group>
+
+    <group
+        android:checkableBehavior="none"
+        android:visible="true">
+
+        <item
+            android:id="@+id/nav_logoff"
+            android:icon="@drawable/ic_action_exit"
+            android:title="@string/str_logoff" />
+
+    </group>
+
+
+
+</menu>

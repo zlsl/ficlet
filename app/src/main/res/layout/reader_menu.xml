@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:cardCornerRadius="3dp"
+    app:contentPadding="@dimen/card_margin"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@android:style/Widget.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/str_reader_settings"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="@string/str_font_size"
+                        android:textColor="@color/textColorDarkSecondary" />
+
+                    <NumberPicker
+                        android:id="@+id/np_font_size1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/str_dot"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/np_font_size2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner_typeface"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/str_text_color" />
+
+                        <View
+                            android:id="@+id/color_fg"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_margin="@dimen/card_margin" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/str_bg_color" />
+
+                        <View
+                            android:id="@+id/color_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_margin="@dimen/card_margin" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_line_interval"
+                            android:textColor="@color/textColorDarkSecondary" />
+
+                        <SeekBar
+                            android:id="@+id/sb_line_interval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            tools:targetApi="o" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_reload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_action_reload"
+                        android:contentDescription="@string/str_reader_reload" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_font_contrast"
+                        android:textColor="@color/textColorDarkSecondary" />
+
+                    <zlobniyslaine.ru.ficbook.controls.FloatSeekBar
+                        android:id="@+id/sb_contrast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:max="100"
+                        android:min="0"
+                        app:floatMax="1"
+                        app:floatMin="0"
+                        tools:targetApi="o" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_brightness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_brightness"
+                        android:textColor="@color/textColorDarkSecondary" />
+
+                    <zlobniyslaine.ru.ficbook.controls.FloatSeekBar
+                        android:id="@+id/sb_brightness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:max="60"
+                        android:min="2"
+                        app:floatMax="1"
+                        app:floatMin="-1"
+                        tools:targetApi="o" />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/cb_night_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/str_night_mode"
+                    android:textColor="@color/textColorDarkSecondary" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/cb_brightness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/str_brightness_control"
+                    android:textColor="@color/textColorDarkSecondary" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/cb_hide_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/str_hide_header"
+                    android:textColor="@color/textColorDarkSecondary" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_closemenu"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@android:string/ok" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

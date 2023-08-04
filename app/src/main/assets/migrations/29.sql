@@ -1,0 +1,1 @@
+ALTER TABLE Fanfic ADD COLUMN trophy TEXT;

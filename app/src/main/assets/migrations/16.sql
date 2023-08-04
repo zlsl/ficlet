@@ -1,0 +1,2 @@
+ALTER TABLE Fanfic ADD COLUMN critic TEXT;
+ALTER TABLE Fanfic ADD COLUMN bookmark TEXT;

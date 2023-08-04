@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FloatSeekBar">
+        <attr name="floatMax" format="float" />
+        <attr name="floatMin" format="float" />
+    </declare-styleable>
+
+
+    <attr name="textViewPagerStyle" format="reference" />
+    <attr name="scrollPageIndicatorStyle" format="reference" />
+
+    <declare-styleable name="TextViewPager">
+        <!-- The layout to use for the TextViews -->
+        <attr name="textViewLayout" format="reference" />
+        <!-- The text to page -->
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewPagerIndicator">
+        <!-- Whether or not the selected indicator fades. -->
+        <attr name="fades" format="boolean" />
+        <!-- Length of the delay to fade the indicator. -->
+        <attr name="fadeDelay" format="integer" />
+        <!-- Length of the indicator fade to transparent. -->
+        <attr name="fadeLength" format="integer" />
+        <!-- Color of the selected line that represents the current page. -->
+        <attr name="selectedColor" format="color" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+
+</resources>

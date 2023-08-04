@@ -1,0 +1,1 @@
+ALTER TABLE Tags ADD COLUMN usage_count INTEGER;

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ff_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/tab"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_keyboard_tab" />
+
+                <ImageButton
+                    android:id="@+id/bold"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_format_bold"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/italic"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_format_italic"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/striked"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_format_strikethrough"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/centered"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_format_align_center"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/righted"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_format_align_right"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/divider"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_linear_scale"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/undo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_undo" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <io.github.mthli.knife.KnifeText
+            android:id="@+id/e_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="top|start"
+            android:inputType="text|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine"
+            android:padding="0dp"
+            android:scrollbars="vertical"
+            app:historyEnable="true"
+            app:historySize="99"
+            app:linkUnderline="true" />
+
+        <zlobniyslaine.ru.ficbook.controls.VerticalSeekBar
+            android:id="@+id/sb_position"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

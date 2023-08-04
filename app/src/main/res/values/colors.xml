@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#583524</color>
+    <color name="colorPrimaryDark">#2f1c16</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecondary">#FFFFFF</color>
+    <color name="windowBackground">#e4dcd8</color>
+    <color name="colorAccent">#dd3132</color>
+
+    <color name="ff_bg">#faf4ea</color>
+    <color name="ff_bg_readed">#ababab</color>
+    <color name="ff_bg_updated">#d5e1c0</color>
+
+    <color name="textColorDarkPrimary">#df000000</color>
+    <color name="textColorDarkDisabled">#80000000</color>
+    <color name="textColorDarkSecondary">#a0000000</color>
+
+    <color name="fbg_gen">#986a43</color>
+    <color name="fbg_het">#3e983f</color>
+    <color name="fbg_other">#67ab9f</color>
+    <color name="fbg_slash">#207898</color>
+    <color name="fbg_femslash">#984f65</color>
+    <color name="fbg_mixed">#f4ab00</color>
+    <color name="fbg_article">#7F7F7E</color>
+    <color name="fbg_request">#5f5f73</color>
+    <color name="fbg_request_done">#5f7f73</color>
+
+    <color name="fsize_drabble">#555555</color>
+
+    <color name="ftitle_finished">#000000</color>
+    <color name="ftitle_process">#8c003f</color>
+    <color name="ftitle_frozed">#2056ff</color>
+
+    <color name="text_day_color">#000000</color>
+    <color name="text_night_color">#aaaaaa</color>
+    <color name="text_bg_night_color">#111111</color>
+
+    <color name="rb_bg_night_color">#222222</color>
+    <color name="rb_fg_night_color">#bebebe</color>
+
+    <color name="rb_bg_day_color">#aaaaaa</color>
+    <color name="rb_fg_day_color">#111111</color>
+
+    <color name="divider_gray">#eae4da</color>
+
+    <color name="transparent">#00ff0000</color>
+
+
+
+    <color name="badge_fandom">#ff8620b5</color>
+    <color name="badge_genre">#ffa4bfad</color>
+    <color name="badge_character">#ff75a9ff</color>
+    <color name="badge_pairing">#ff9375ff</color>
+    <color name="badge_caution">#ffea614f</color>
+    <color name="badge_rating">#ffbaa11f</color>
+    <color name="badge_direction">#ff999999</color>
+    <color name="badge_text">#ff222222</color>
+    <color name="badge_text_fandom">#ffEEEEEE</color>
+
+
+    <color name="reader_bg_day">#ffffff</color>
+    <color name="reader_bg_night">#000000</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#086e00</color>
+
+
+
+</resources>

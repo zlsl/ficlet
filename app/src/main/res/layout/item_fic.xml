@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginTop="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fcard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/fbg_gen"
+                android:elevation="6dp"
+                android:orientation="vertical"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:id="@+id/tv_direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="@dimen/card_margin"
+                    android:shadowColor="#000000"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:text="@string/str_def_def"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/fic_item_header_text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ff_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/card_margin"
+                android:paddingTop="@dimen/card_margin"
+                android:paddingRight="6dp"
+                android:paddingBottom="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_sizetype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/card_margin"
+                        android:layout_marginRight="@dimen/card_margin"
+                        android:text="@string/str_sizetype" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/str_default_text"
+                        android:textColor="#000"
+                        android:textSize="@dimen/fic_item_header_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_trophy_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_def_def"
+                        android:textColor="#d49600"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_trophy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/string_default_number"
+                        android:textColor="#d49600"
+                        android:textSize="@dimen/fic_item_header_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_default_number"
+                        android:textColor="#086e00"
+                        android:textSize="@dimen/fic_item_header_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/round_cover"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_authors"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/str_default_text"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_rating"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/card_margin"
+                            android:layout_marginRight="@dimen/card_margin"
+                            android:layout_weight="1"
+                            android:text="@string/str_rat_def"
+                            android:textSize="@dimen/fic_item_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_default_text"
+                            android:textSize="@dimen/fic_item_text_size" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_fandom_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_def_def"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_fandoms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_default_text"
+                            android:textSize="@dimen/fic_item_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_pairings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_pairings_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_def_def"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_pairings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_default_text"
+                            android:textSize="@dimen/fic_item_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_genres"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_genres_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_def_def"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_genres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_default_text"
+                            android:textSize="@dimen/fic_item_text_size" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_cautions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_cautions_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_def_def"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_cautions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_default_text"
+                            android:textSize="@dimen/fic_item_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tags_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/str_def_def"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/fic_item_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_tags"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_default_text"
+                            android:textSize="@dimen/fic_item_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_default_text"
+                    android:textColor="@color/textColorDarkPrimary"
+                    android:textSize="@dimen/fic_item_description_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_new_parts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:background="#009900"
+                    android:gravity="start|end"
+                    android:paddingLeft="@dimen/card_margin"
+                    android:paddingRight="@dimen/card_margin"
+                    android:text="@string/str_default_text"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/fic_item_labels_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_critic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:background="#ffcc00"
+                    android:gravity="start|end"
+                    android:paddingLeft="@dimen/card_margin"
+                    android:paddingRight="@dimen/card_margin"
+                    android:text="@string/str_wait_critic"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fic_item_labels_text_size"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_new_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/str_default_text"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/fic_item_labels_text_size" />
+
+                <ProgressBar
+                    android:id="@+id/read_progress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_margin"
+                    android:layout_weight="1"
+                    android:minHeight="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="3dp"
+                    android:text="@string/str_default_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/fic_item_labels_text_size" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_deleted"
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="#CF0A0A"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

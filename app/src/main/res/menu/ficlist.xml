@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_fetchall"
+        android:icon="@drawable/ic_system_update_alt"
+        android:title="@string/str_fetchallf"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_addfeed"
+        android:icon="@drawable/ic_action_feed"
+        android:title="@string/str_createfeed"
+        app:showAsAction="always"/>
+</menu>

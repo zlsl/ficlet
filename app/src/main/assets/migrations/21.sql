@@ -1,0 +1,1 @@
+ALTER TABLE Parts ADD COLUMN position INTEGER;

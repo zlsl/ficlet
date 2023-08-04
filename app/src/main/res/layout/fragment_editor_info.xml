@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="horizontal|vertical"
+    android:fillViewport="true"
+    tools:context="zlobniyslaine.ru.ficbook.ActivityReader">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:text="@string/str_default_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/e_part_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/str_part_title"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/e_comments_before"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/str_part_comment_before"
+                android:inputType="textMultiLine"
+                android:minLines="8"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/e_comments_after"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/str_part_comment_after"
+                android:inputType="textMultiLine"
+                android:minLines="8"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/e_changes_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/str_part_comments_ch"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:importantForAutofill="no" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner_work_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entryValues="@array/array_work_status" />
+
+        <CheckBox
+            android:id="@+id/cb_draft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_part_draft" />
+
+        <Spinner
+            android:id="@+id/spinner_work_publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entryValues="@array/array_work_publish"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</ScrollView>

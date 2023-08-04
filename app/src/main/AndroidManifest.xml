@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <application
+        android:name="zlobniyslaine.ru.ficbook.Application"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:targetApi="q">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.activeandroid.content.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+        </provider>
+
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.GenericFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="zlobniyslaine.ru.ficbook"
+            android:grantUriPermissions="true"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:theme="@style/AppTheme.Launcher"
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FandomsActivity"
+            android:label="Fandoms"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivitySearch"
+            android:label="Поиск"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityChatChannels"
+            android:label="Чаты"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityChatRoom"
+            android:label="Чат"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityFanfic"
+            android:label="Фанфик"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ActivityReader"
+            android:label="Читалка"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+
+            <intent-filter android:scheme="http"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/fb2+zip"/>
+                <data android:mimeType="application/x-fictionbook"/>
+                <data android:mimeType="application/vnd.comicbook+zip"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="*" android:scheme="http"/>
+                <data android:host="*" android:pathPattern=".*\\.fb2" android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="*" android:scheme="http"/>
+                <data android:pathPattern=".*.fb2"/>
+                <data android:pathPattern=".*.fb2.zip"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="*" android:scheme="http"/>
+                <data android:mimeType="application/x-fictionbook"/>
+                <data android:mimeType="application/fb2+zip"/>
+                <data android:mimeType="application/vnd.comicbook+zip"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:scheme="file"/>
+                <data android:pathPattern=".*.fb2"/>
+                <data android:pathPattern=".*.fb2.zip"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:mimeType="text/plain" android:scheme="file"/>
+                <data android:pathPattern=".*.fb2"/>
+                <data android:pathPattern=".*.fb2.zip"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="*" android:pathPattern=".*.fb2" android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="application/fb2"/>
+                <data android:mimeType="application/fb2+zip"/>
+                <data android:mimeType="application/x-fictionbook"/>
+                <data android:mimeType="application/vnd.comicbook+zip"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ActivityVoiceReaderPro"
+            android:label="Голосовая читалка"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityAuthors"
+            android:label="Авторы"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityAuthorProfile"
+            android:label="Автор"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityFanficList"
+            android:label="Фанфики"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityPartEditor"
+            android:label="Редактор"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivitySettings"
+            android:label="Настройки"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityWorks"
+            android:label="Мои фанфики"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityEditor"
+            android:label="Редактор"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityMessagingList"
+            android:label="Личные сообщения"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityChatThread"
+            android:label="Сообщения"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityChanges"
+            android:label="Сообщения"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityOauth"
+            android:label="OAuth авторизация"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityAbout"
+            android:label="О приложении"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityAuthorsSearch"
+            android:label="Поиск автора"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityNotifications"
+            android:label="Уведомления"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityGlobalFilter"
+            android:label="Суперфильтр фанфиков"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityFollows"
+            android:label="Обсуждения"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityReviews"
+            android:label="Комментарии"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityProfile"
+            android:label="Профиль"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityFeeds"
+            android:label="Ленты"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityRequestsList"
+            android:label="Заявки"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityRequestsSearch"
+            android:label="Поиск заявок"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityRequest"
+            android:label="Заявка"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityFicByRequestList"
+            android:label="Заявка"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityFanficNew"
+            android:label="Новый фанфик"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ActivityDebug"
+            android:label="Отладка"
+            android:configChanges="orientation|screenSize" />
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="ficbookz.db" />
+
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="29" />
+
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="zlobniyslaine.ru.ficbook.models.Tags, zlobniyslaine.ru.ficbook.models.TagsCategory, zlobniyslaine.ru.ficbook.models.Category, zlobniyslaine.ru.ficbook.models.Fandoms, zlobniyslaine.ru.ficbook.models.Collections, zlobniyslaine.ru.ficbook.models.Authors, zlobniyslaine.ru.ficbook.models.FanficPage, zlobniyslaine.ru.ficbook.models.Fanfic, zlobniyslaine.ru.ficbook.models.Parts, zlobniyslaine.ru.ficbook.models.Feeds" />
+
+        <property
+            android:name="android.content.MEDIA_CAPABILITIES"
+            android:resource="@xml/media_capabilities" />
+    </application>
+
+
+</manifest>

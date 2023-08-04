@@ -1,0 +1,4 @@
+ALTER TABLE Fanfic ADD COLUMN date_changes TEXT;
+ALTER TABLE Fanfic ADD COLUMN new_content TEXT;
+ALTER TABLE Fanfic ADD COLUMN bad TEXT;
+

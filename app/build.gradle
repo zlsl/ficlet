@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion '30.0.3'
+    defaultConfig {
+        applicationId "zlobniyslaine.ru.ficbook"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 1161
+        versionName "1.161"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+        }
+        debug {
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    namespace 'zlobniyslaine.ru.ficbook'
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.biometric:biometric:1.2.0-alpha04'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
+    implementation 'com.squareup.moshi:moshi:1.12.0'
+    implementation 'com.squareup.moshi:moshi-adapters:1.12.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3' //new api
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+//    implementation 'org.sufficientlysecure:html-textview:3.5'
+    implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    //noinspection GradleDependency
+    implementation 'commons-io:commons-io:2.5' //!!!! for <=6.0
+    implementation 'de.cketti.library.changelog:ckchangelog-legacy-dialog:2.0.0-SNAPSHOT'
+    implementation 'org.apmem.tools:layouts:1.10@aar'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation 'me.saket:better-link-movement-method:2.2.0'
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+    implementation 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'com.github.Cutta:TagView:1.3'
+    implementation 'com.github.chathuralakmal:AndroidImagePopup:1.2.1'
+    implementation 'com.github.mthli:Knife:v1.1' // editor
+    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation 'com.github.skydoves:colorpickerpreference:2.0.6'
+    implementation 'com.mikepenz:materialdrawer:6.1.2'
+    implementation 'com.github.Mamoon-Alhawamdeh:AmazingSpinner:1.1.0'
+
+}

@@ -1,0 +1,328 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Ficlet - Книга Фанфиков</string>
+
+    <string name="action_settings">Настройки</string>
+    <string name="str_show_covers">Показывать обложки</string>
+    <string name="str_fingerprint">Вход биометрия/код</string>
+    <string name="action_update">Обновить базы</string>
+    <string name="action_global_filter">Суперфильтр фанфиков</string>
+    <string name="action_flush">Очистить кэш</string>
+    <string name="action_export">Выгрузить кэш</string>
+    <string name="action_stats">Статистика</string>
+    <string name="str_guest">Гость</string>
+    <string name="str_name">Имя</string>
+    <string name="str_profile">Профиль</string>
+    <string name="str_password">Пароль</string>
+    <string name="str_login_warning">Имя и пароль необходимо вводить с учетом регистра!</string>
+    <string name="string_default_number">+1234</string>
+    <string name="str_default_text">Текстовый placeholder</string>
+    <string name="str_part_title">Название части</string>
+    <string name="str_part_comments_ch">Комментарий к изменениям</string>
+    <string name="str_part_draft">Черновик (пока не показывать эту часть)</string>
+    <string name="str_part_comment_before">Комментарий перед частью</string>
+    <string name="str_part_comment_after">Комментарий после части</string>
+    <string name="str_rev_part_list">Обратный порядок глав</string>
+    <string name="str_search_sort">Сортировка</string>
+    <string name="str_search_hideread">Не показывать прочитанное</string>
+    <string name="str_search_rating">Рейтинг</string>
+    <string name="str_search_direction">Направленность</string>
+    <string name="str_search_size">Размер</string>
+    <string name="str_search_max">Максимум</string>
+    <string name="str_txt_search">Найти</string>
+    <string name="min">Минимум</string>
+    <string name="str_search_pages">По количеству страниц</string>
+    <string name="str_search_phrase">В названии которого есть слова</string>
+    <string name="str_search_nofandom">Исключить прочие фэндомы</string>
+    <string name="str_search_translate">Перевод</string>
+    <string name="str_search_status">Статус работы</string>
+    <string name="str_search_likes">По количеству лайков</string>
+    <string name="str_fanfic_title">Название фанфика</string>
+    <string name="str_rate">Оценить</string>
+    <string name="str_to_collection">В сборник</string>
+    <string name="str_enter_text">Введите текст</string>
+    <string name="str_randomfic">Случайный фанфик</string>
+    <string name="str_popularfic">Популярное</string>
+    <string name="str_critfic">Ждут критики</string>
+    <string name="str_pmessages">Личные сообщения</string>
+    <string name="str_fanfics">Фанфики</string>
+    <string name="str_likefic">Понравившиеся работы</string>
+    <string name="str_likeauthor">Избранные авторы</string>
+    <string name="str_likedfics">Лента избранных</string>
+    <string name="str_login">Вход</string>
+    <string name="str_logoff">Выход</string>
+    <string name="str_login_social_vk">Вход ВКонтакте</string>
+    <string name="str_about">Версия</string>
+    <string name="str_logo">Logo</string>
+    <string name="str_fic_longtext">Книга фанфиков - для ficbook.net</string>
+    <string name="str_ofpublicvk">Официальная группа приложения в ВКонтакте:</string>
+    <string name="src_ficlet">FICLET</string>
+    <string name="src_https_vk_com_ficlet">https://vk.com/ficlet</string>
+    <string name="str_ofpublictelegram">Чат в Telegram:</string>
+    <string name="src_telegram_ficlet">http://t.me/ficlet</string>
+    <string name="str_scroll_smooth">Плавная прокрутка в читалке</string>
+    <string name="str_cache_feeds">Кэшировать ленты</string>
+    <string name="str_cache_pages">Кэш разбивки страниц</string>
+    <string name="str_brightness_control">Управлять яркостью</string>
+    <string name="str_font_size">Размер шрифта</string>
+    <string name="str_line_interval">Межстрочный интервал</string>
+    <string name="str_font_contrast">Контраст</string>
+    <string name="str_hide_header">Скрывать верхнюю панель</string>
+    <string name="str_demotext">Однажды весною, в час небывало жаркого заката, в Москве, на Патриарших прудах, появились два гражданина. Первый из них, одетый в летнюю серенькую пару, был маленького роста, упитан, лыс, свою приличную шляпу пирожком нес в руке, а на хорошо выбритом лице его помещались сверхъестественных размеров очки в черной роговой оправе, второй плечистый, рыжеватый, вихрастый молодой человек в заломленной на затылок клетчатой кепке — был в ковбойке, жеваных белых брюках и в черных тапочках.</string>
+    <string name="str_author_search">Поиск автора</string>
+    <string name="str_author_search_hint">Поиск автора (с учетом регистра)</string>
+    <string name="str_notifications">Уведомления</string>
+    <string name="str_night_mode">Ночной режим читалки</string>
+    <string name="str_open_links">Подсвечивать ссылки</string>
+    <string name="str_comment">Комментарий</string>
+    <string name="str_search_chars_allow">Обязательные персонажи</string>
+    <string name="str_search_chars_deny">Запрещенные персонажи</string>
+    <string name="str_wait_critic">Ждёт критики</string>
+    <string name="str_search_sub">Искать также по описанию фэндома</string>
+    <string name="str_allupdated">Все фанфики</string>
+    <string name="str_fullui">Все элементы интерфейса</string>
+    <string name="str_add_char">Добавить</string>
+    <string name="str_add_pairing">Пэйринг</string>
+    <string name="str_follows">Обсуждения</string>
+    <string name="str_feeds">Ленты</string>
+    <string name="str_requests_search">Поиск заявок</string>
+    <string name="str_requests">Заявки</string>
+    <string name="str_cache_mirror">Онлайн-кэш</string>
+    <string name="str_font_scale">Масштаб шрифта</string>
+
+    <string name="str_4pda">Обсуждение на 4pda.ru</string>
+
+    <string-array name="array_font_scale">
+        <item>Мелкий</item>
+        <item>Небольшой</item>
+        <item>Нормальный</item>
+        <item>Крупный</item>
+        <item>Огромный</item>
+    </string-array>
+
+    <string-array name="array_search_mode">
+        <item>Любой фэндом</item>
+        <item>Ориджиналы</item>
+        <item>Все фанфики в группе фэндомов</item>
+        <item>Фанфики по конкретным фэндомам</item>
+    </string-array>
+
+    <string-array name="array_translate">
+        <item>Все равно</item>
+        <item>Перевод с иностранного языка</item>
+        <item>Оригинальный текст</item>
+    </string-array>
+
+    <string-array name="array_status">
+        <item>Все равно</item>
+        <item>В процессе</item>
+        <item>Завершен</item>
+        <item>Заморожен</item>
+    </string-array>
+
+    <string-array name="array_size">
+        <item>Драббл</item>
+        <item>Мини</item>
+        <item>Миди</item>
+        <item>Макси</item>
+    </string-array>
+
+    <string-array name="array_rating">
+        <item>G</item>
+        <item>PG-13</item>
+        <item>R</item>
+        <item>NC-17</item>
+        <item>NC-21</item>
+    </string-array>
+
+    <string-array name="array_direction">
+        <item>Джен</item>
+        <item>Гет</item>
+        <item>Слэш</item>
+        <item>Фемслэш</item>
+        <item>Другие виды отношений</item>
+        <item>Смешанная</item>
+        <item>Статья</item>
+    </string-array>
+
+
+    <string-array name="array_sort">
+        <item>по оценкам читателей (лучшее наверху)</item>
+        <item>по количеству отзывов</item>
+        <item>по дате обновления</item>
+        <item>по количеству страниц</item>
+        <item>20 случайных работ</item>
+    </string-array>
+
+    <string-array name="array_requests_type">
+        <item>Активные заявки</item>
+        <item>Выполненные заявки</item>
+        <item>Архив заявок</item>
+    </string-array>
+
+    <string-array name="array_sort_requests">
+        <item>по количеству заинтересовавшихся читателей</item>
+        <item>по дате добавления заявки</item>
+    </string-array>
+
+    <string-array name="array_comment_place">
+        <item>После части</item>
+        <item>Перед частью</item>
+    </string-array>
+
+    <string-array name="array_work_status">
+        <item>В процессе</item>
+        <item>Завершен</item>
+        <item>Заморожен</item>
+    </string-array>
+
+    <string-array name="array_work_publish">
+        <item>Не публиковать автоматически</item>
+        <item>Опубликовать в определенное время</item>
+        <item>Опубликовать, когда кол-во ждущих</item>
+    </string-array>
+
+    <string-array name="array_collection_sort_mode">
+        <item>Свой порядок</item>
+        <item>По последнему обновлению</item>
+        <item>По добавлению в сборник</item>
+    </string-array>
+
+    <string-array name="array_typefaces">
+        <item>Sans Serif - без засечек</item>
+        <item>Serif - с засечками</item>
+    </string-array>
+
+    <string-array name="array_fanfic_type">
+        <item>Фанфик вашего авторства</item>
+        <item>Перевод с иностранного языка (с разрешения автора)</item>
+    </string-array>
+
+    <string-array name="array_fandom_type">
+        <item>Ориджинал</item>
+        <item>Фанфик по фэндому</item>
+    </string-array>
+
+
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+
+    <string name="page_n_of">%1$d/%2$d</string>
+    <string name="percent_n">%.1f%%</string>
+    <string name="brightness_n">%1$d</string>
+    <string name="ficlet_v">FICLET %1$s</string>
+    <string name="rate_plus">+%1$s</string>
+    <string name="str_reply">Ответить</string>
+    <string name="str_set_follow">Подписаться на обновления</string>
+    <string name="str_pagelink_warning">В этом режиме на страницах с ссылками навигация с помощью жестов может не работать! Используйте кнопки управления громкостью для перелистывания.</string>
+    <string name="str_hide_dir">Не показывать направленности:</string>
+    <string name="str_d_gen">Джен</string>
+    <string name="str_d_het">Гет</string>
+    <string name="str_d_other">Прочее</string>
+    <string name="str_d_slash">Слэш</string>
+    <string name="str_d_femslash">Фемслэш</string>
+    <string name="str_d_mixed">Смешанное</string>
+    <string name="str_d_article">Статьи</string>
+    <string name="str_warn_filter">При включенном фильтре возможна долгая загрузка списка фанфиков из за того, что обрабатывается больше данных (на одной странице может вообще не быть фанфиков, удовлетворяющих условиям и будет загружена следующая страница и так далее). Объем интернет-трафика также может увеличиться</string>
+
+
+    <string name="changelog_full_title" tools:keep="@string/changelog_full_title">Изменения</string>
+    <string name="changelog_title">Что нового</string>
+    <string name="changelog_ok_button" tools:keep="@string/changelog_ok_button">OK</string>
+    <string name="changelog_show_full" tools:keep="@string/changelog_show_full">История</string>
+    <string name="str_new_reader">Новая версия читалки</string>
+    <string name="str_smart_part_readed">Отмечать все главы до прочитанной</string>
+    <string name="str_collections_sort_mode">Сортировка в коллекциях</string>
+    <string name="str_ficbook_net">Регистрация выполняется на сайте ficbook.net</string>
+    <string name="str_ficlet_ru">Сайт ficlet.ru недоступен. Попробуйте сменить интернет-подключение.</string>
+    <string name="str_uuid">Не удалось получить таблицы парсинга!</string>
+    <string name="str_popular_authors">Популярные авторы</string>
+    <string name="str_search_type">Тип поиска</string>
+    <string name="str_fandom_group">Группа фэндомов</string>
+    <string name="str_fandoms">Фэндомы</string>
+    <string name="str_deny_fandom">Исключить</string>
+    <string name="str_fandom_allow">Добавить</string>
+    <string name="str_tts_read">Чтение голосом</string>
+    <string name="str_tts_speed">Скорость чтения</string>
+    <string name="str_tts_pitch">Высота голоса</string>
+    <string name="str_tts_engine">Голосовой движок</string>
+    <string name="str_tts_voices">Голос</string>
+    <string name="str_reader_settings">Настройки читалки</string>
+    <string name="str_common_settings">Общие настройки</string>
+    <string name="str_yofix">Восстанавливать букву \'Ё\'</string>
+    <string name="str_yofix_warning">Буква \'Ё\' будет восстанавливаться из словаря, для спорных моментов (все-всё и т.д.) замена не производится. Этот режим нагружает процессор, скорость загрузки фанфика и листание страниц значительно снизится. Для вертикальной читалки время загрузки значительно увеличится!</string>
+    <string name="str_typograf">Типограф</string>
+    <string name="str_feed_name">Название ленты</string>
+    <string name="str_feedmanage">Управлять лентами можно через меню Ленты. Также одну из лент можно поставить на главную страницу.</string>
+    <string name="str_new_feed_create">Создание новой ленты</string>
+    <string name="str_createfeed">Создать ленту</string>
+    <string name="str_request_type">Тип заявки</string>
+    <string name="str_like_int">Интересно</string>
+    <string name="str_rq_bookmark">В закладки</string>
+    <string name="str_social_auth">Авторизация через соцсети</string>
+    <string name="str_vertical_reader">Вертикальная читалка</string>
+    <string name="str_brightness">Яркость экрана</string>
+    <string name="str_autoscroll">Автопрокрутка</string>
+    <string name="str_scroll_speed">Скорость прокрутки</string>
+    <string name="str_orientation_portrait">Портретная ориентация</string>
+    <string name="str_typeface">Шрифт читалки</string>
+    <string name="str_nf_author">Автор</string>
+    <string name="str_originlal_text_link">Ссылка на оригинальный текст</string>
+    <string name="str_chars_pairings">Персонажи и пейринги</string>
+    <string name="str_cautions_n">Предупреждения</string>
+    <string name="str_description_n">Описание</string>
+    <string name="str_work_comment">Комментарий к работе</string>
+    <string name="str_belong_t">Посвящение</string>
+    <string name="str_genres">Жанры</string>
+    <string name="str_hide_crit">Скрывать \"Ждет критики\"</string>
+
+
+    <string name="str_fetchallf">Скачать все</string>
+
+    <string name="str_text_color">Цвет текста</string>
+    <string name="str_bg_color">Цвет фона</string>
+    <string name="str_page_jump">Переход к странице</string>
+    <string name="str_only_own_coll">Отображать только свои сборники</string>
+    <string name="str_rate_txt">Оценить</string>
+    <string name="str_author_chat_open">Переписка с автором</string>
+    <string name="str_autoscroll2">Автопрокрутка</string>
+    <string name="str_reader_settings_txt">Настройки читалки</string>
+    <string name="str_vreader_startstop">Старт-стоп</string>
+    <string name="str_reload_coll">Обновить список</string>
+    <string name="str_remove_feed">Удалить ленту</string>
+    <string name="str_remove_foll">Удалить</string>
+    <string name="str_noticon_txt">Уведомление</string>
+    <string name="str_reader_settings22">Настройки читалки</string>
+    <string name="str_reader_reload">Обновить</string>
+    <string name="str_dot">.</string>
+    <string name="str_select_mode">Режим выделения</string>
+    <string name="str_page_goto">Переход к странице</string>
+    <string name="str_rat_def">R</string>
+    <string name="str_def_def">!</string>
+    <string name="str_sizetype"></string>
+    <string name="str_clearlog">Clear log</string>
+    <string name="str_emaillog">Email Log</string>
+    <string name="str_cat_load"></string>
+    <string name="str_add_def_feeds">Добавить стандартные ленты</string>
+    <string name="str_fandoms_group">Группа фэндомов</string>
+    <string name="str_reader_t">Читалка</string>
+    <string name="str_audiobook_r">Аудиокнига</string>
+    <string name="str_mark_readed">Прочитано!</string>
+    <string name="str_mark_unread">Непрочитано</string>
+    <string name="str_share_link_t">Поделиться ссылкой</string>
+    <string name="str_create_shortcut">На главный экран</string>
+    <string name="str_download_f">Скачать</string>
+    <string name="str_down_txt">Формат TXT</string>
+    <string name="str_down_fb2">Формат FB2</string>
+    <string name="str_down_pdf">Формат PDF</string>
+    <string name="str_down_epub">Формат EPUB</string>
+    <string name="str_downopen">Скачать и открыть</string>
+    <string name="str_downopen_txt">Формат TXT</string>
+    <string name="str_downopen_fb2">Формат FB2</string>
+    <string name="str_downopen_pdf">Формат PDF</string>
+    <string name="str_downopen_epub">Формат EPUB</string>
+    <string name="str_labels_f">Метки</string>
+    <string name="str_dir_dee"></string>
+    <string name="str_send_ch_mesg">Send</string>
+
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@raw/changelog_master">
+
+    <release version="1.161" versioncode="1161" >
+        <change>Исправление в отображении списка работ.</change>
+    </release>
+
+</changelog>

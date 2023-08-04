@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windowBackground"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_hide_dir" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_gen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_gen"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_het"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_het"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_other"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_slash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_slash"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_femslash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_femslash"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_mixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_mixed"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_d_article"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_warn_filter"
+            android:textColor="@color/colorAccent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_readed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_search_hideread"
+            android:textColor="@color/textColorDarkSecondary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/cb_filter_crit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/str_hide_crit"
+            android:textColor="@color/textColorDarkSecondary" />
+
+    </LinearLayout>
+</ScrollView>
